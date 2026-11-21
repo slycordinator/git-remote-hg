@@ -40,6 +40,11 @@ setuptools.setup(name="git-remote-hg",
       license="GPLv2",
       keywords="git hg mercurial",
       scripts=["git-remote-hg", "git-hg-helper"],
-      classifiers=CLASSIFIERS
+      classifiers=CLASSIFIERS,
+      extras_require={
+          ":python_version < '3.0'": [
+              "pathlib2",
+        ],
+    },
      )
 
